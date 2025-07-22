@@ -13,7 +13,7 @@ const Home = () => {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(`${apiUrl}fetchAll`);
-        setBlog(response.data.blogs);
+        setBlog(response?.data?.blogs);
       } catch (error) {
         console.error("Failed to fetch users:", error);
       }
@@ -55,9 +55,9 @@ const Home = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {blog.map((post) => (
           <div key={post._id} className="bg-white p-4 rounded-lg shadow-md">
-            <h2 className="text-xl font-bold mb-2">{post.title}</h2>
+            <h2 className="text-xl font-bold mb-2">{post?.title}</h2>
             <p className="text-gray-700 mb-2">
-              {post.description.substring(0, 100)}...
+              {post?.description.substring(0, 100)}...
             </p>
             {isLoggedIn ? (
               <button

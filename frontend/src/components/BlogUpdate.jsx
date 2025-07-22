@@ -16,7 +16,7 @@ const BlogUpdate = () => {
     const fetchBlogDetails = async () => {
       try {
         const response = await axios.get(`${apiUrl}fetchOne/${blogId}`);
-        setBlogDetails(response.data.findBlog);
+        setBlogDetails(response?.data?.findBlog);
       } catch (error) {
         console.error("Failed to fetch blog details:", error);
       }
@@ -55,7 +55,7 @@ const BlogUpdate = () => {
           <input
             type="text"
             name="title"
-            value={blogDetails.title}
+            value={blogDetails?.title}
             onChange={handleChange}
             className="w-full px-4 py-2 border rounded-lg"
             required
@@ -67,7 +67,7 @@ const BlogUpdate = () => {
           </label>
           <textarea
             name="description"
-            value={blogDetails.description}
+            value={blogDetails?.description}
             onChange={handleChange}
             className="w-full px-4 py-2 border rounded-lg"
             required

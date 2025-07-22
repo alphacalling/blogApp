@@ -27,7 +27,7 @@ const Login = () => {
       toast.success("Login successful");
       localStorage.setItem("isLoggedIn", "true");
 
-      // 🔧 Notify other components like Navbar
+      // Notify other components like Navbar
       window.dispatchEvent(new Event("loginStatusChanged"));
 
       setLoginUser({ email: "", password: "" });
@@ -61,7 +61,7 @@ const Login = () => {
           id="email"
           required
           placeholder="Enter your email"
-          value={loginUser.email}
+          value={loginUser?.email}
           onChange={handleChange}
           className="w-full text-lg bg-slate-100 rounded-md p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
@@ -75,7 +75,7 @@ const Login = () => {
           id="password"
           required
           placeholder="Enter your password"
-          value={loginUser.password}
+          value={loginUser?.password}
           onChange={handleChange}
           className="w-full text-lg bg-slate-100 rounded-md p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
         />

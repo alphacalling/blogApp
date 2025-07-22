@@ -13,7 +13,7 @@ const BlogDetail = () => {
     const fetchBlogDetails = async () => {
       try {
         const response = await axios.get(`${apiUrl}fetchOne/${blogId}`);
-        setBlogDetails(response.data.findBlog);
+        setBlogDetails(response?.data?.findBlog);
       } catch (error) {
         console.error("Failed to fetch blog details:", error);
       }
@@ -48,14 +48,14 @@ const BlogDetail = () => {
       </h1>
       <div className="mb-6">
         <h2 className="text-2xl font-semibold text-blue-700 mb-2">
-          Title: {blogDetails.title}
+          Title: {blogDetails?.title}
         </h2>
         <p className="text-gray-700 text-lg mb-4">
-          Description: {blogDetails.description}
+          Description: {blogDetails?.description}
         </p>
         <div className="text-sm text-gray-500">
-          <p>Updated at: {new Date(blogDetails.updatedAt).toLocaleString()}</p>
-          <p>Created at: {new Date(blogDetails.createdAt).toLocaleString()}</p>
+          <p>Updated at: {new Date(blogDetails?.updatedAt).toLocaleString()}</p>
+          <p>Created at: {new Date(blogDetails?.createdAt).toLocaleString()}</p>
         </div>
       </div>
       <div className="flex gap-4">

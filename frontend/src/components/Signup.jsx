@@ -53,7 +53,7 @@ const SignUp = () => {
           id="userName"
           name="userName"
           required
-          value={userData.userName}
+          value={userData?.userName}
           onChange={handleChange}
           placeholder="Enter your name"
           className="w-full text-lg bg-slate-100 rounded-md p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -67,7 +67,7 @@ const SignUp = () => {
           id="email"
           name="email"
           required
-          value={userData.email}
+          value={userData?.email}
           onChange={handleChange}
           placeholder="Enter your email"
           className="w-full text-lg bg-slate-100 rounded-md p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -84,7 +84,7 @@ const SignUp = () => {
           id="password"
           name="password"
           required
-          value={userData.password}
+          value={userData?.password}
           onChange={handleChange}
           placeholder="Enter your password"
           className="w-full text-lg bg-slate-100 rounded-md p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"

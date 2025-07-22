@@ -52,7 +52,7 @@ const BlogCreate = () => {
             type="text"
             id="title"
             name="title"
-            value={blogData.title}
+            value={blogData?.title}
             onChange={handleChange}
             required
             className="w-full p-2 border border-gray-300 rounded-md"
@@ -65,7 +65,7 @@ const BlogCreate = () => {
           <textarea
             id="description"
             name="description"
-            value={blogData.description}
+            value={blogData?.description}
             onChange={handleChange}
             required
             rows="5"
