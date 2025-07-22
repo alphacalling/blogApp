@@ -53,7 +53,7 @@ const Home = () => {
         </button>
       )}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {blog.map((post) => (
+        {blog?.map((post) => (
           <div key={post._id} className="bg-white p-4 rounded-lg shadow-md">
             <h2 className="text-xl font-bold mb-2">{post?.title}</h2>
             <p className="text-gray-700 mb-2">
